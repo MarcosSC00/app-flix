@@ -1,0 +1,12 @@
+.watch {
+  margin-top: 84px;
+}
+.watch iframe {
+  padding-block: 70px;
+}
+@media (max-width: 1024px) {
+  iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}

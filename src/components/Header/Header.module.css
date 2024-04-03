@@ -1,0 +1,140 @@
+/* <header>*/
+.header {
+  background-color: #000;
+  border-bottom: 2px solid #f44336;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 68px;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 300;
+  padding-inline: 20px;
+}
+.header span {
+  font-size: 2rem;
+  color: #b71c1c;
+  font-weight: 500;
+}
+.header a {
+  text-decoration: none;
+  color: #fff;
+  padding-inline: 0.5rem;
+  cursor: pointer;
+}
+/*</header>*/
+
+/*<nav>*/
+.header nav {
+  display: flex;
+}
+.header nav.menu .links {
+  display: flex;
+  gap: 4rem;
+  transition: all 0.3s ease;
+}
+/*</nav>*/
+
+/*<menu-general>*/
+.header nav.menu .hamburguer-menu {
+  display: none;
+  flex-direction: column;
+  width: 30px;
+  height: 30px;
+  gap: 5px;
+  justify-content: center;
+  cursor: pointer;
+}
+.barra-menu {
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  transition: all 0.3s ease-in-out;
+}
+/*</menu-general>*/
+
+/*<menu-actived>*/
+.header nav.menu-actived {
+  display: none;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  text-align: center;
+  gap: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.header nav.menu-actived .links {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  width: 100px;
+  height: auto;
+  background-color: #f44336;
+  border-radius: 15px;
+  padding: 10px;
+}
+.header nav.menu-actived .barra-menu.b1 {
+  transform: rotate(-45deg) translate(-5px, 4px);
+}
+.header nav.menu-actived .barra-menu.b2 {
+  transform: rotate(45deg);
+}
+.header nav.menu-actived .barra-menu.b3 {
+  opacity: 0;
+  visibility: 0;
+}
+/*</menu-actived>*/
+@media (max-width: 900px) {
+  .header nav .links {
+    font-size: 18px;
+  }
+  .header nav.menu .links {
+    gap: 20px;
+  }
+}
+@media (max-width: 580px) {
+  .header {
+    justify-content: space-between;
+    padding-inline: 20px;
+  }
+  .header span {
+    font-size: 24px;
+  }
+  .header a {
+    font-size: 0.8rem;
+    padding-inline: 0.5rem;
+  }
+  .header nav.menu .links {
+    display: none;
+  }
+  .header nav.menu-actived {
+    display: flex;
+  }
+  .header nav.menu-actived .links {
+    display: flex;
+    gap: 40px;
+  }
+  .header nav.menu .hamburguer-menu {
+    display: flex;
+  }
+}
+@media (max-width: 380px) {
+  .header span {
+    font-size: 1.5rem;
+  }
+  .header nav.menu .links {
+    display: none;
+  }
+  .header nav.menu-actived {
+    display: flex;
+  }
+  .header nav.menu-actived .links {
+    display: flex;
+  }
+  .header nav.menu .hamburguer-menu {
+    display: flex;
+  }
+}
